@@ -97,7 +97,7 @@
   border-top: 1px solid var(--dark);
   background-color: var(--light);
   cursor: pointer;
-
+  z-index: 998;
 }
 
 @media (max-width: 700px){
@@ -144,7 +144,6 @@
     background-color: var(--dark);
     color: var(--light);
     gap: 2rem;
-
   }
 
   .mobileMenu > li {

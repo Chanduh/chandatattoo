@@ -18,6 +18,7 @@ export default function MobileMenu(props) {
       {/* <a href="#shop">
         <li onClick={handleMenuIconClick}><h2>shop</h2></li>
       </a> */}
+
     </ul>
   )
 }

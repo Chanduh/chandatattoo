@@ -18,6 +18,9 @@ export default function Home() {
 
   const [bookingForm, setBookingForm] = useState(false);
   const handleBookingClick = () => {
+    if (openMenu) {
+      setOpenMenu(false); 
+    }
     (bookingForm)? setBookingForm(false) : setBookingForm(true);
   }
 

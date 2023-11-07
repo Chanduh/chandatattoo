@@ -114,6 +114,7 @@ import styles from '../page.module.css';
 
 function Book(props) {
   const { handleBookingClick } = props;
+
   const initialValues = {
     name: '',
     phoneNumber: '',
@@ -124,6 +125,7 @@ function Book(props) {
     colorChoice: '',
     selectedDates: '',
   };
+
 
   const handleNetlifySubmit = async (values, { resetForm }) => {
     resetForm();
