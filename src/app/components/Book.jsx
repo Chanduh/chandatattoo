@@ -260,7 +260,7 @@ function Book(props) {
             as="textarea"
             id="tattooIdea"
             name="tattooIdea"
-            style={{ width: '100%', height: '140px', padding: '.5rem' }}
+            style={{ width: '100%', height: '100px', padding: '.5rem' }}
           />
           <ErrorMessage name="tattooIdea" component="div" />
         </div>
