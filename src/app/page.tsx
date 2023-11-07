@@ -18,7 +18,7 @@ export default function Home() {
 
   const [bookingForm, setBookingForm] = useState(false);
   const handleBookingClick = () => {
-    setBookingForm(true);
+    (bookingForm)? setBookingForm(false) : setBookingForm(true);
   }
 
   return (
@@ -51,7 +51,7 @@ export default function Home() {
         </section>
 
         <section id="content">
-          {bookingForm && <Book/>}
+          {bookingForm && <Book handleBookingClick={handleBookingClick}/>}
           <DesignGallery />
           {/* <Designs /> */}
           <Faq />

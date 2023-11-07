@@ -1,8 +1,8 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import styles from '../page.module.css'
 
-function Book() {
-
+function Book(props) {
+  const { handleBookingClick } = props;
   const initialValues = {
     name: '',
     phoneNumber: '',
@@ -13,6 +13,11 @@ function Book() {
     colorChoice: '',
     selectedDates: ''
     };
+
+    const handleNetlifySubmit = async (values, { resetForm }) => {
+      resetForm();
+      handleBookingClick();
+    }
 
     const handleSubmit = async (values, { resetForm }) => {
       try {
@@ -27,7 +32,6 @@ function Book() {
         if (response.ok) {
           const formData = await response.json()
           console.log(formData)
-          console.log('went aight')
           resetForm();
           console.log('Form submitted successfully!');
         } else {
@@ -41,7 +45,8 @@ function Book() {
   return (
     <div id="book" className={styles.content}>
       <h2>Booking Request</h2>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      {/* <Formik initialValues={initialValues} onSubmit={handleSubmit}> */}
+      <Formik initialValues={initialValues} onSubmit={handleNetlifySubmit}>
 
         <Form className={styles.form} name="book" method="POST" data-netlify="true">
           <div>
