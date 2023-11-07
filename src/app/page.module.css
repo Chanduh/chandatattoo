@@ -1,0 +1,169 @@
+.form {
+ max-width: 700px;
+ margin-bottom: 3rem;
+}
+
+.form > div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.button{
+  padding: 1rem;
+  border: none;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 1.5rem;
+  position: relative;
+  right: 0px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-top: 2rem;
+  max-width: 95vw;
+  
+}
+.banner {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  background-color: var(--light);
+  z-index: 1000;
+}
+
+.banner > h2 {
+  padding-left: 1rem;
+  text-transform: uppercase;
+
+}
+.banner > h1 {
+  display: none;
+  margin-left: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -.5rem;
+}
+
+.header > ul {
+  list-style: none;
+}
+.header > ul > a > li {
+  text-decoration: none;
+  padding: .5rem;
+  text-transform: uppercase;
+  background-color: var(--dark);
+  color: var(--light);
+  margin: .5rem;
+}
+
+.logo {
+  width: 400px;
+  max-width: 45vw;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.design {
+  height: 300px;
+  width: auto;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0px;
+  border-top: 1px solid var(--dark);
+  background-color: var(--light);
+  cursor: pointer;
+
+}
+
+@media (max-width: 700px){
+  .container {
+    flex-direction: column;
+    max-width: 100vw;
+  }
+  .design {
+    width: 50vw;
+    height: auto;
+  }
+  .header {
+    height: calc(100vh - 10rem);
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    gap: 0;
+    width: 100vw;
+  }
+  .header > ul {
+    display: none;
+  }
+  .logo {
+    max-width: 95vw;
+  }
+  .footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding-bottom: 2rem;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark);
+    color: var(--light);
+    gap: 2rem;
+
+  }
+
+  .mobileMenu > li {
+    text-decoration: none;
+    background-color: var(--dark);
+
+  }
+
+  .content {
+    padding: 1rem;
+  }
+  .banner > h1 {
+    font-size: 4rem;
+    display: block;
+  }
+  .banner {
+    padding: 0rem;
+  }
+
+  }
