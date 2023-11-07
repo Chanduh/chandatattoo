@@ -42,7 +42,8 @@ function Book() {
     <div id="book" className={styles.content}>
       <h2>Booking Request</h2>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form className={styles.form}>
+
+        <Form className={styles.form} name="book" method="POST" data-netlify="true">
           <div>
             <label htmlFor="name">Name</label>
             <Field type="text" id="name" name="name" style={{ width: '100%', height: '40px', padding: '.5rem' }}/>
