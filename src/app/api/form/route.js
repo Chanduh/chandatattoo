@@ -4,7 +4,6 @@ import { Resend } from 'resend';
 
 const EMAILTO = process.env.EMAILTO;
 const EMAILFROM = process.env.EMAILFROM;
-
 const PASSWORD = process.env.PASS;
 const KEY = process.env.KEY;
 

@@ -2,12 +2,12 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-import Designs from './Components/Designs.jsx'
+import Designs from './components/Designs.jsx'
 import DesignGallery from './components/DesignGallery.jsx'
-import Faq from './Components/Faq.jsx'
-import Book from './Components/Book.jsx'
-import Shop from './Components/Shop.jsx'
-import MobileMenu from './Components/MobileMenu.jsx'
+import Faq from './components/Faq.jsx'
+import Book from './components/Book.jsx'
+import Shop from './components/Shop.jsx'
+import MobileMenu from './components/MobileMenu.jsx'
 import { useState } from 'react'
 
 export default function Home() {
