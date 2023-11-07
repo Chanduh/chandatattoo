@@ -170,7 +170,7 @@ function Book(props) {
 
         <p style={{ display: 'none' }}>
           <label>
-            Don’t fill this out if you are human: <input name="bot-field" />
+            Do not fill this out if you are human: <input name="bot-field" />
           </label>
         </p>
 
