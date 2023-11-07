@@ -25,6 +25,9 @@ function Book() {
         });
     
         if (response.ok) {
+          const formData = await response.json()
+          console.log(formData)
+          console.log('went aight')
           resetForm();
           console.log('Form submitted successfully!');
         } else {
