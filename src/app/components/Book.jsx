@@ -130,8 +130,36 @@ function Book(props) {
     handleBookingClick();
   };
 
+  const handleSubmit = async (values, { resetForm }) => {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+          try {
+            const response = await fetch(`${apiUrl}/api/form`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(values), 
+            });
+        
+            if (response.ok) {
+              const formData = await response.json()
+              console.log(formData)
+              resetForm();
+              console.log('Form submitted successfully!');
+            } else {
+              console.log('Form submission failed.');
+            }
+          } catch (error) {
+            console.error('Error submitting the form:', error);
+          }
+        };
+
+
   return (
-    <Formik initialValues={initialValues} onSubmit={handleNetlifySubmit}>
+  <div id="book" className={styles.content}>
+    <h2>Booking Request</h2>
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <Form
         name="book"
         method="POST"
@@ -240,6 +268,7 @@ function Book(props) {
         </button>
       </Form>
     </Formik>
+  </div>
   );
 }
 
