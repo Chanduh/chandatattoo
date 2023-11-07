@@ -25,7 +25,7 @@ function DesignGallery() {
   }, []);
 
   return (
-    <div>
+    <div id='designs' className={styles.content}>
       <h2>Available Designs</h2>
       <div>
         {designs.map((designUrl, index) => (

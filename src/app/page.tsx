@@ -24,9 +24,9 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
       <nav className={styles.banner}>
-        <h4>seppukoool tattoo</h4>
-        <h1 onClick={handleMenuIconClick}>+</h1> 
-        {/* ✦ */}
+        <h4 onClick={handleMenuIconClick}>seppukoool tattoo</h4>
+        <h1 onClick={handleMenuIconClick} style={{ transform: openMenu ? 'rotate(45deg)' : 'none' }}>+</h1>
+
       </nav>
 
       {openMenu && <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu} handleMenuIconClick={handleMenuIconClick}/>}
@@ -52,7 +52,6 @@ export default function Home() {
 
         <section id="content">
           {bookingForm && <Book/>}
-          {/* <Book /> */}
           <DesignGallery />
           {/* <Designs /> */}
           <Faq />

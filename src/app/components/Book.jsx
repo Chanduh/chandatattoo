@@ -92,12 +92,6 @@ function Book() {
             <Field as="textarea" id="tattooIdea" name="tattooIdea" style={{ width: '100%', height: '140px', padding: '.5rem' }}/>
             <ErrorMessage name="tattooIdea" component="div" />
           </div>
-{/* 
-          <div>
-            <label htmlFor="image">Attach an Image</label>
-            <Field type="file" id="image" name="image" accept="image/*" style={{ width: '100%', height: '40px', padding: '.5rem' }}/>
-            <ErrorMessage name="image" component="div" />
-          </div> */}
 
           <button type="submit" className={styles.button}>Submit</button>
           
