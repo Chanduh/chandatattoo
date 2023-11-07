@@ -48,6 +48,8 @@ function Book(props) {
       {/* <Formik initialValues={initialValues} onSubmit={handleSubmit}> */}
       <Formik initialValues={initialValues} onSubmit={handleNetlifySubmit}>
         <Form name="book" method="POST" data-netlify="true" className={styles.form}>
+        <Field type="hidden" name="form-name" value="book" />
+
         {/* <Form className={styles.form} name="book" method="POST" data-netlify="true"> */}
           <div>
             <label htmlFor="name">Name</label>
