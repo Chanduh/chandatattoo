@@ -64,7 +64,12 @@ export default function Home() {
 
       <footer id="bookButton" className={styles.footer}>
         <a href="#book">
-          <h4 onClick={handleBookingClick}>BOOK NOW</h4>
+          {/* <h4 onClick={handleBookingClick}>BOOK NOW</h4> */}
+          <a href="mailto:tattoochanda@gmail.com?subject=Booking&body=Name:%0D%0APhone:%0D%0ATattoo%20Description:%0D%0ATypical%20Availability:">
+            <h4>BOOK NOW</h4>
+          </a>
+
+
         </a>
       </footer>
 
